@@ -13,13 +13,13 @@ public class Event {
     @Column(nullable = false, length = 200)
     private String title;
 
-    @Column(nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     @Column(columnDefinition = "TEXT")
     private String link;
 
-    //empty constructor required by Hibernate
+    //empty constructor required by spring framework
     public Event() {
     }
 
