@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Create an event')">
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+	<div class="container">
+		<form class="form-group" th:action="@{/events/create}" th:method="POST" th:object="${event}">
+			<label for="inlineFormInputName2">Title</label>
+			<input type="text" name="title" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" th:field="*{title}">
+
+			<label for="inlineFormInputName3">Description</label>
+			<input type="text" name="description" class="form-control mb-2 mr-sm-2" id="inlineFormInputName3" th:field="*{description}">
+
+			<label for="inlineFormInputName4">Link</label>
+			<input type="text" name="link" class="form-control mb-2 mr-sm-2" id="inlineFormInputName4" th:field="*{link}">
+
+			<button type="submit" class="btn btn-primary mb-2 mr-2">Create event</button>
+		</form>
+	</div>
+</body>
+</html>
