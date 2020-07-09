@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Show an event')">
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="card border-white" style="width: 18rem;">
+			<div class="card-body">
+				<h2>Your Event:</h2>
+				<h3 th:text="${event.title}" class="card-title">Title</h3>
+				<p th:text="${event.description}" class="card-text">Description</p>
+				<form th:action="${event.link}" th:method="GET" th:target="_blank">
+					<button type="submit">Facebook</button>
+				</form>
+				<!--				<p th:text="${postId}" class="card-text"></p> This may be used some time in the future...-->
+<!--				<p th:text="'Posted by: ' + ${event.user.username}" class="card-text">Username</p>-->
+<!--				<p th:text="'Email: ' + ${event.user.email}" class="card-text">User's email</p>-->
+<!--	-->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
